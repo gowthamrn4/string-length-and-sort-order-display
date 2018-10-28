@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <style>
+   body{
+    width:300px;
+    margin:80px auto;
+    background:pink;
+   }  
+   #demo{
+    text-decoration:underline;
+   }
+  
+  </style>
+  </head>
+<body>
+
+<h5>jack  and  jill went upto the hill</h5>
+<input type="text" id="name" name="">
+
+<h3 id="demo"></h3>
+<input type="button" onclick="myFunction()" name="" value="click">
+<script>
+    function myFunction(){
+	    var test = document.getElementById("name").value;
+        var text ="";
+        for(var i=0;i<test.length;i++){
+             text +=test[i];
+            
+              var my =  text.split(" ")
+              if(my){
+                var get = my.sort();
+              }
+              var sort = get.sort(function(a,b){
+              	return b.length - a.length;
+              })
+             }
+    
+            
+
+    document.getElementById("demo").innerHTML = sort.join(" ")
+    
+}
+</script>
+
+</body>
+</html>
